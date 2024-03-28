@@ -2,15 +2,20 @@ import { usePathname } from "next/navigation";
 import { links } from "../constants/constants";
 import Link from "next/link";
 import { IoClose } from "react-icons/io5";
+import { IconButton } from "../ui/IconButton";
 
-export function MobileMenu({ toggleMenu }) {
+export type MobileMenuProps = {
+  toggleMenu: () => void;
+};
+
+export function MobileMenu({ toggleMenu }: MobileMenuProps) {
   const pathname = usePathname();
   return (
-    <div className="absolute w-3/6 top-0 right-0 h-screen p-5 shadow-2xl bg-primary flex flex-col">
+    <div className="absolute w-3/6 top-0 right-0 h-screen p-8 shadow-2xl bg-primary flex flex-col">
       <div className="flex justify-end">
-        <button className="square-btn" onClick={toggleMenu}>
+        <IconButton toggleMenu={toggleMenu}>
           <IoClose size={30} />
-        </button>
+        </IconButton>
       </div>
       <div className="flex flex-col justify-center items-center gap-10 h-full">
         {links.map((link) => (
