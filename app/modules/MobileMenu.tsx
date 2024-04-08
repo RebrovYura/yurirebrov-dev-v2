@@ -11,7 +11,7 @@ export type MobileMenuProps = {
 export function MobileMenu({ toggleMenu }: MobileMenuProps) {
   const pathname = usePathname();
   return (
-    <div className="absolute w-3/6 top-0 right-0 h-screen p-8 shadow-2xl bg-primary flex flex-col">
+    <div className="absolute z-10 w-3/6 top-0 right-0 h-screen p-8 shadow-2xl bg-primary flex flex-col">
       <div className="flex justify-end">
         <IconButton toggleMenu={toggleMenu}>
           <IoClose size={30} />
@@ -22,6 +22,7 @@ export function MobileMenu({ toggleMenu }: MobileMenuProps) {
           <Link
             key={link.name}
             href={link.url}
+            target={link?.target}
             className={`${pathname === link.url ? "underline" : "no-underline"}`}
             onClick={toggleMenu}
           >

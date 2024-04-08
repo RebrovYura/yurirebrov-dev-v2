@@ -13,21 +13,19 @@ import { IconButton } from "../ui/IconButton";
 export function Header() {
   const pathname = usePathname();
   const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
-
   const toggleMenu = () => {
     setToggleMobileMenu((prev) => !prev);
   };
-
   return (
     <div className="flex justify-between items-center py-9 px-8 border-b relative">
       <Logo />
-      <nav className="hidden md:flex gap-5">
+      <nav className="hidden md:flex gap-8">
         {links.map((link) => (
           <Link
             key={link.name}
             href={link.url}
             target={link?.target}
-            className={`${pathname === link.url ? "underline" : "no-underline"}`}
+            className={`hover:underline ${pathname === link.url ? "underline" : "no-underline"}`}
           >
             {link.name}
           </Link>

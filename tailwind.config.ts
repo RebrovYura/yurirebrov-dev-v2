@@ -24,6 +24,7 @@ const config: Config = {
       },
       boxShadow: {
         custom: "0px 0px 56px -15px rgba(30,30,30,1)",
+        button: "0 4px 4px 1px rgba(74, 222, 160, 0.25)",
       },
     },
   },

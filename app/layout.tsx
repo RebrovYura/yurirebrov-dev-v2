@@ -1,9 +1,8 @@
-import React from "react";
 import type { Metadata } from "next";
-import { Header } from "./modules/Header";
 import { imb_plex_mono } from "./ui/fonts";
 import "./globals.css";
-import { AnimatePresenceProvider, MotionDiv } from "./ui/Motion/MotionDiv";
+import { AnimatePresenceProvider, MotionDiv } from "./ui/Motion/MotionClient";
+import { Header } from "./modules/Header";
 import { Footer } from "./modules/Footer";
 
 export const metadata: Metadata = {
@@ -26,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${imb_plex_mono.className} bg-slate-50`}>
+      <body className={`${imb_plex_mono.className} bg-slate-50 relative`}>
         <AnimatePresenceProvider mode="wait" initial={true}>
           <MotionDiv
             initial="hidden"
@@ -37,7 +36,7 @@ export default function RootLayout({
             className="mt-0 md:mt-20 md:max-w-5xl mx-auto md:rounded-t-xl bg-primary min-h-screen shadow-xl flex flex-col relative"
           >
             <Header />
-            <div className="py-9 px-8 grow">{children}</div>
+            <div className="py-9 px-8 grow relative">{children}</div>
             <Footer />
           </MotionDiv>
         </AnimatePresenceProvider>

@@ -4,8 +4,8 @@ type TitleProps = {
 
 export function Title({ text }: TitleProps) {
   return (
-    <div className="font-semibold text-4xl pb-3">
-      <p className="">{text}</p>
+    <div className="font-semibold text-3xl pb-3">
+      <p>{text}</p>
     </div>
   );
 }
