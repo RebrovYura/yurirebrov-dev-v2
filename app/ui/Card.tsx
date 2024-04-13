@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import Converter from "@/public/works/converter.png";
-import { Title } from "./Title";
+import { ContentTitle } from "./Content";
 import { LinkButton } from "./LinkButton";
 import { Tag } from "./Tag";
 
@@ -21,7 +21,7 @@ export function Card({ work_page }: CardProps) {
       />
       <div className="flex flex-col gap-2 p-3">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-          <Title text="Converter App" />
+          <ContentTitle text="Converter App" />
           <div className="flex gap-1">
             <Tag>React</Tag>
             <Tag>React</Tag>

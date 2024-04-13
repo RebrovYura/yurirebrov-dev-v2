@@ -4,6 +4,7 @@ import "./globals.css";
 import { AnimatePresenceProvider, MotionDiv } from "./ui/Motion/MotionClient";
 import { Header } from "./modules/Header";
 import { Footer } from "./modules/Footer";
+import PageTransition from "./ui/Motion/PageTransition";
 
 export const metadata: Metadata = {
   title: "Homepage | Yuri Rebrov",
@@ -26,20 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${imb_plex_mono.className} bg-slate-50 relative`}>
-        <AnimatePresenceProvider mode="wait" initial={true}>
-          <MotionDiv
-            initial="hidden"
-            animate="enter"
-            exit="exit"
-            variants={variants}
-            transition={{ duration: 0.4, type: "easeInOut" }}
-            className="mt-0 md:mt-20 md:max-w-5xl mx-auto md:rounded-t-xl bg-primary min-h-screen shadow-xl flex flex-col relative"
-          >
-            <Header />
-            <div className="py-9 px-8 grow relative">{children}</div>
-            <Footer />
-          </MotionDiv>
-        </AnimatePresenceProvider>
+        <div className="mt-0 md:mt-20 md:max-w-5xl mx-auto md:rounded-t-xl bg-primary min-h-screen shadow-xl flex flex-col relative">
+          <Header />
+          <div className="py-9 px-8 grow relative">{children}</div>
+          <Footer />
+        </div>
       </body>
     </html>
   );

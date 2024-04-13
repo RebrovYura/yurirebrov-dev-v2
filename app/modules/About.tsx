@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Title } from "../ui/Title";
+import { ContentTitle } from "../ui/Content";
 import { LinkButton } from "../ui/LinkButton";
 
 export function About() {
   return (
     <>
       <div className="flex flex-col max-w-[480px] pb-6">
-        <Title text="About me 👋" />
+        <ContentTitle text="About me 👋" />
         <div className="border-l-2 border-secondary pl-5 text-justify">
           I&apos;m Yuri Rebrov and I&apos;m a digital creator from Belarus. I
           started learning programming after I entered college in 2016. It was a

@@ -1,3 +1,11 @@
+import PageTransition from "../ui/Motion/PageTransition";
+
 export default function Page() {
-  return <div>Blog</div>;
+  return (
+    <PageTransition>
+      <div>
+        <p>Blog</p>
+      </div>
+    </PageTransition>
+  );
 }
