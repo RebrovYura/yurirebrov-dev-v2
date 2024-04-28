@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { ContentTitle } from "../ui/Content";
+import { ContentTitle, ContentWrapper, ContentBox } from "../ui/Content";
 import { LinkButton } from "../ui/LinkButton";
 
 export function About() {
   return (
     <>
-      <div className="flex flex-col max-w-[480px] pb-6">
+      <ContentBox>
         <ContentTitle text="About me 👋" />
-        <div className="border-l-2 border-secondary pl-5 text-justify">
+        <ContentWrapper>
           I&apos;m Yuri Rebrov and I&apos;m a digital creator from Belarus. I
           started learning programming after I entered college in 2016. It was a
           long adventure lasting 4 years. I have gained a huge amount of
@@ -26,8 +26,8 @@ export function About() {
           working with <span className="important-text">AR</span>, which became
           the topic of my diploma.
           <br />I am currently studying programming at the university.
-        </div>
-      </div>
+        </ContentWrapper>
+      </ContentBox>
       <LinkButton href="/works">See my projects</LinkButton>
     </>
   );
