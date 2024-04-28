@@ -1,12 +1,10 @@
-type ContentProps = {
-  children: React.ReactNode;
-};
+import { IChildren } from "../lib/types";
 
 type ContentTitleProps = {
   text: string;
 };
 
-export function ContentWrapper({ children }: ContentProps) {
+export function ContentWrapper({ children }: IChildren) {
   return (
     <div className="border-l-2 border-secondary pl-5 text-justify">
       {children}
@@ -22,7 +20,7 @@ export function ContentTitle({ text }: ContentTitleProps) {
   );
 }
 
-export function ContentBox({ children }: ContentProps) {
+export function ContentBox({ children }: IChildren) {
   return (
     <div className="flex flex-col max-w-[480px] pb-6 w-full">{children}</div>
   );

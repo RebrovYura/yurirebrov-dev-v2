@@ -11,3 +11,14 @@ export interface ISocialLinks {
   name: string;
   url: string;
 }
+
+export interface IWorks {
+  title: string;
+  url: string;
+  img: any;
+  tags: (string | { name: string })[];
+}
+
+export interface IChildren {
+  children: React.ReactNode;
+}
