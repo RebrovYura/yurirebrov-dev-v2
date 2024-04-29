@@ -7,7 +7,7 @@ import expenseTracker from "@/public/thumbs/expense-tracker.png";
 import modernWebsite from "@/public/thumbs/modern-website.png";
 
 export const links: ILinks[] = [
-  //   { name: "Home", url: "/" },
+    // { name: "Home", url: "/" },
   { name: "Works", url: "/works" },
   { name: "Posts", url: "/posts" },
   { name: "Source", url: "https://github.com/RebrovYura", target: "_blank" },
@@ -18,7 +18,7 @@ export const socialLinks: ILinks[] = [
   { name: "Telegram", url: "https://t.me/davenli" },
   {
     name: "ArtStation",
-    url: "ghttps://www.artstation.com/yurirebrov",
+    url: "https://www.artstation.com/yurirebrov",
   },
 ];
 
