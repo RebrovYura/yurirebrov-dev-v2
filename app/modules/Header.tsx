@@ -25,7 +25,7 @@ export function Header() {
             key={link.name}
             href={link.url}
             target={link?.target}
-            className={`hover:underline ${pathname === link.url ? "underline" : "no-underline"}`}
+            className={`hover:underline ${pathname.includes(link.url) ? "underline" : "no-underline"}`}
           >
             {link.name}
           </Link>

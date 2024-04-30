@@ -23,7 +23,7 @@ export function MobileMenu({ toggleMenu }: MobileMenuProps) {
             key={link.name}
             href={link.url}
             target={link?.target}
-            className={`${pathname === link.url ? "underline" : "no-underline"}`}
+            className={`${pathname.includes(link.url) ? "underline" : "no-underline"}`}
             onClick={toggleMenu}
           >
             {link.name}
