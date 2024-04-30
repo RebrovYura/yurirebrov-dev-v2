@@ -20,5 +20,5 @@ export interface IWorks {
 }
 
 export interface IChildren {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
