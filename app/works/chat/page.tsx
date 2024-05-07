@@ -24,10 +24,6 @@ export default function Page() {
     <PageTransition>
       <Breadcrumb>Chat App</Breadcrumb>
       <ContentTitle text="Welcome to the Chat App!" />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <ContentImage src={signup} alt="Sign Up page" />
-        <ContentImage src={mainPage} alt="Main page" />
-      </div>
       <MotionDiv
         variants={variants}
         initial="hidden"
@@ -91,15 +87,16 @@ export default function Page() {
         <ContentSubTitle text="Source" />
         <ContentList>
           <li>
-            <Link
-              href="https://github.com/RebrovYura/chat-app"
-              target="_blank"
-              className="hover:underline"
-            >
+            <ContentLink href="https://github.com/RebrovYura/chat-app">
               GitHub
-            </Link>
+            </ContentLink>
           </li>
         </ContentList>
+        <ContentSubTitle text="Preview" />
+        <div className="grid grid-cols-1 gap-2 place-items-center">
+          <ContentImage src={signup} alt="Sign Up page" />
+          <ContentImage src={mainPage} alt="Main page" />
+        </div>
       </MotionDiv>
     </PageTransition>
   );

@@ -24,9 +24,6 @@ export default function Page() {
     <PageTransition>
       <Breadcrumb>Converter App</Breadcrumb>
       <ContentTitle text="Welcome to the Converter App!" />
-
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      </div> */}
       <MotionDiv
         variants={variants}
         initial="hidden"
@@ -88,13 +85,9 @@ export default function Page() {
         <ContentSubTitle text="Source" />
         <ContentList>
           <li>
-            <Link
-              href="https://github.com/RebrovYura/currency-converter-app"
-              target="_blank"
-              className="hover:underline"
-            >
+            <ContentLink href="https://github.com/RebrovYura/currency-converter-app">
               GitHub
-            </Link>
+            </ContentLink>
           </li>
         </ContentList>
         <ContentSubTitle text="Preview" />
