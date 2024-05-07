@@ -16,7 +16,11 @@ export interface IWorks {
   title: string;
   url: string;
   img: any;
-  tags: (string | { name: string })[];
+  tags: {
+    name: string;
+  }[];
+  // tags: (string | { name: string })[];
+  text: string;
 }
 
 export interface IChildren {

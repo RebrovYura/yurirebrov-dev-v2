@@ -1,17 +1,17 @@
 import Breadcrumb from "@/app/ui/Breadcrumb";
 import {
   ContentImage,
+  ContentLink,
   ContentList,
   ContentSubTitle,
   ContentTitle,
-  ContentWrapper,
 } from "@/app/ui/Content";
 import { MotionDiv } from "@/app/ui/Motion/MotionClient";
 import PageTransition from "@/app/ui/Motion/PageTransition";
-
-import mainPage from "@/public/works/converter.png";
-import converterPage from "@/public/works/converter1.png";
 import Link from "next/link";
+
+import mainPage from "@/public/works/converter/converter.png";
+import converterPage from "@/public/works/converter/converter1.png";
 
 const variants = {
   hidden: { opacity: 0, x: 30, y: 0 },
@@ -24,10 +24,9 @@ export default function Page() {
     <PageTransition>
       <Breadcrumb>Converter App</Breadcrumb>
       <ContentTitle text="Welcome to the Converter App!" />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <ContentImage src={mainPage} alt="Main page" />
-        <ContentImage src={converterPage} alt="Converter page" />
-      </div>
+
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      </div> */}
       <MotionDiv
         variants={variants}
         initial="hidden"
@@ -53,9 +52,29 @@ export default function Page() {
       >
         <ContentSubTitle text="Stack" />
         <ContentList>
-          <li>You can convert from one currency to another;</li>
-          <li>You can see exchanges rate for select currency;</li>
-          <li>Supports light/dark themes.</li>
+          <li>
+            <ContentLink href="https://vitejs.dev/">Vite+React</ContentLink> -
+            Vite is a build tool that aims to provide a faster and leaner
+            development experience for modern web projects.
+          </li>
+          <li>
+            <ContentLink href="https://tailwindcss.com/">
+              Tailwindcss
+            </ContentLink>{" "}
+            - Tailwind CSS is an open source CSS framework.
+          </li>
+          <li>
+            <ContentLink href="https://chakra-ui.com/">Chakra UI</ContentLink> -
+            Chakra UI is a simple, modular and accessible component library that
+            gives you the building blocks you need to build your React
+            applications.
+          </li>
+          <li>
+            <ContentLink href="https://www.exchangerate-api.com/">
+              ExchangeRate-API
+            </ContentLink>{" "}
+            - Currency conversion rates for 161 currencies.
+          </li>
         </ContentList>
       </MotionDiv>
       <MotionDiv
@@ -78,6 +97,11 @@ export default function Page() {
             </Link>
           </li>
         </ContentList>
+        <ContentSubTitle text="Preview" />
+        <div className="grid grid-cols-1 gap-2 place-items-center">
+          <ContentImage src={mainPage} alt="Main page" />
+          <ContentImage src={converterPage} alt="Converter page" />
+        </div>
       </MotionDiv>
     </PageTransition>
   );

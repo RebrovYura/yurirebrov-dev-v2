@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { ContentTitle, ContentWrapper, ContentBox } from "../ui/Content";
-import { LinkButton } from "../ui/LinkButton";
+import { StyledButton } from "../ui/StyledButton";
 
 export function About() {
   return (
@@ -28,7 +27,7 @@ export function About() {
           <br />I am currently studying programming at the university.
         </ContentWrapper>
       </ContentBox>
-      <LinkButton href="/works">See my projects</LinkButton>
+      <StyledButton href="/works">See my projects</StyledButton>
     </>
   );
 }

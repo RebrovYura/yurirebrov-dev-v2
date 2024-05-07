@@ -1,12 +1,9 @@
-"use client";
-
 import { useEffect } from "react";
 import { Hero } from "./modules/Hero";
 import { About } from "./modules/About";
 import { MotionDiv } from "./ui/Motion/MotionClient";
 import { Links } from "./modules/Links";
 import PageTransition from "./ui/Motion/PageTransition";
-import BlockTransition from "./ui/Motion/BlockTransition";
 
 const variants = {
   hidden: { opacity: 0, x: 30, y: 0 },

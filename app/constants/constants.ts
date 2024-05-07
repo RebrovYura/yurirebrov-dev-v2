@@ -26,25 +26,29 @@ export const works: IWorks[] = [
   {
     title: "Converter App",
     url: "converter",
-    img: converter,
+    img: "/thumbs/converter.png",
     tags: [{ name: "react" }, { name: "api" }],
+    text: "This application allows you to transfer from one currency to another. Build with React and ExchangeRate-API."
   },
   {
     title: "Chat App",
     url: "chat",
-    img: chat,
+    img: "/thumbs/chat.png",
     tags: [{ name: "react" }, { name: "firebase" }],
+    text: "This application allows you register/login and to chat with other users. Build with React and Firebase.",
   },
   {
-    title: "Expense Tracker App",
+    title: "Expense Tracker",
     url: "expense-tracker",
-    img: expenseTracker,
+    img: "/thumbs/expense-tracker.png",
     tags: [{ name: "vue" }],
+    text: "Easy to use, convenient tracker for income and expenses. Build with Vue3.",
   },
   {
     title: "Modern Website",
     url: "modern-website",
-    img: modernWebsite,
+    img: "/thumbs/modern-website.png",
     tags: [{ name: "react" }],
+    text: "Adaptive and modern website for a bank. Build with React.",
   },
 ];

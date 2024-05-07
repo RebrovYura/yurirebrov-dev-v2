@@ -1,9 +1,20 @@
 import Image from "next/image";
 import { IChildren } from "../lib/types";
+import Link from "next/link";
 
 type ContentTitleProps = {
   text: string;
 };
+
+interface IContentImage {
+  src: any;
+  alt: string;
+}
+
+interface IContentLink {
+  href: string;
+  children: React.ReactNode;
+}
 
 export function ContentWrapper({ children }: IChildren) {
   return (
@@ -35,10 +46,24 @@ export function ContentBox({ children }: IChildren) {
   );
 }
 
-export function ContentImage({ src, alt }) {
-  return <Image src={src} alt={alt} className="rounded-[10px]" />;
+export function ContentImage({ src, alt }: IContentImage) {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      className="rounded-[10px] max-w-[720px] w-full"
+    />
+  );
 }
 
 export function ContentList({ children }: IChildren) {
   return <ul className="list-disc flex flex-col gap-y-3 pl-8">{children}</ul>;
+}
+
+export function ContentLink({ href, children }: IContentLink) {
+  return (
+    <Link href={href} className="font-bold hover:underline">
+      {children}
+    </Link>
+  );
 }

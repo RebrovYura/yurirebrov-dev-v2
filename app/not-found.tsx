@@ -1,6 +1,6 @@
 import { ContentBox, ContentTitle, ContentWrapper } from "./ui/Content";
-import { LinkButton } from "./ui/LinkButton";
 import PageTransition from "./ui/Motion/PageTransition";
+import { StyledButton } from "./ui/StyledButton";
 
 export default function NotFound() {
   return (
@@ -12,7 +12,7 @@ export default function NotFound() {
             Page you&apos;re looking for was not found.
           </ContentWrapper>
         </ContentBox>
-        <LinkButton href="/">Return to home</LinkButton>
+        <StyledButton href="/">Return to home</StyledButton>
       </div>
     </PageTransition>
   );

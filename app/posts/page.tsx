@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <PageTransition>
       <Breadcrumb />
-      <ContentTitle text="There are no posts here yet 😕" />
+      <ContentTitle text="Posts coming soon 🏃" />
     </PageTransition>
   );
 }

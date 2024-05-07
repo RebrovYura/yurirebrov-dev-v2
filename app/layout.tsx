@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { imb_plex_mono } from "./ui/fonts";
 import "./globals.css";
-import { AnimatePresenceProvider, MotionDiv } from "./ui/Motion/MotionClient";
+import { MotionDiv } from "./ui/Motion/MotionClient";
 import { Header } from "./modules/Header";
 import { Footer } from "./modules/Footer";
 import PageTransition from "./ui/Motion/PageTransition";
 
 export const metadata: Metadata = {
-  title: "Homepage | Yuri Rebrov",
+  title: "Yuri Rebrov | Front-end Developer",
   description: "Yuri's personal space",
   authors: [{ name: "Yuri Rebrov", url: "https://github.com/RebrovYura" }],
   creator: "Yuri Rebrov",
