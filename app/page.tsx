@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Hero } from "./modules/Hero";
 import { About } from "./modules/About";
 import { MotionDiv } from "./ui/Motion/MotionClient";

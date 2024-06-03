@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <PageTransition>
       <Breadcrumb />
-      <div className="flex flex-col items-center sm:items-stretch gap-4 w-full">
+      <div className="flex flex-col items-center sm:items-stretch gap-5 w-full">
         {works.map((item) => (
           <ItemCard
             key={item.title}
