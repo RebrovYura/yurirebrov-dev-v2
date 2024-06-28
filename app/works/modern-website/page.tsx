@@ -22,7 +22,7 @@ const variants = {
 export default function Page() {
   return (
     <PageTransition>
-      <Breadcrumb>Expense Tracker App</Breadcrumb>
+      <Breadcrumb>Modern Website</Breadcrumb>
       <ContentTitle text="Welcome to the Modern Website Lending!" />
       <MotionDiv
         variants={variants}
