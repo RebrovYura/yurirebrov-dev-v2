@@ -14,8 +14,8 @@ export function ItemCard({ title, url, tags, img, text }: IWorks) {
         boxShadow: "none",
       }}
     >
-      <div className="flex flex-col sm:flex-row border-2 rounded-inherit border-slate-200">
-        <ItemCardImage img={img} alt={`${title} project image`} />
+      <div className="flex flex-col sm:flex-row border-2 rounded-inherit border-slate-200 ">
+        {/* <ItemCardImage img={img} alt={`${title} project image`} /> */}
         <div className="p-3 flex flex-col grow-1">
           <div>
             <ContentTitle text={title} />

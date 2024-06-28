@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { imb_plex_mono } from "./ui/fonts";
-import "./globals.css";
 import { Header } from "./modules/Header";
 import { Footer } from "./modules/Footer";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Yuri Rebrov | Front-end Developer",

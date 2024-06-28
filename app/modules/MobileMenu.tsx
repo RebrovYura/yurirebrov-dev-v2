@@ -3,6 +3,13 @@ import { links } from "../constants/constants";
 import Link from "next/link";
 import { IoClose } from "react-icons/io5";
 import { IconButton } from "../ui/IconButton";
+import { MotionDiv } from "../ui/Motion/MotionClient";
+
+const variants = {
+  hidden: { opacity: 0, x: 30, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: -30, y: 0 },
+};
 
 export type MobileMenuProps = {
   toggleMenu: () => void;
@@ -11,7 +18,14 @@ export type MobileMenuProps = {
 export function MobileMenu({ toggleMenu }: MobileMenuProps) {
   const pathname = usePathname();
   return (
-    <div className="absolute z-10 w-3/6 top-0 right-0 h-screen p-8 shadow-2xl bg-primary flex flex-col">
+    <MotionDiv
+      variants={variants}
+      initial="hidden"
+      animate="enter"
+      exit="exit"
+      transition={{ duration: 0.4, type: "easeInOut" }}
+      className="absolute z-10 w-3/6 top-0 right-0 h-96 p-8 shadow-2xl rounded-lg bg-primary flex flex-col"
+    >
       <div className="flex justify-end">
         <IconButton toggleMenu={toggleMenu}>
           <IoClose size={30} />
@@ -31,6 +45,6 @@ export function MobileMenu({ toggleMenu }: MobileMenuProps) {
         ))}
       </div>
       <div className="text-center text-slate-500">Yuri Rebrov</div>
-    </div>
+    </MotionDiv>
   );
 }

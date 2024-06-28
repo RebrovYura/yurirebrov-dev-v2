@@ -9,6 +9,8 @@ import { links } from "../constants/constants";
 import { MobileMenu } from "./MobileMenu";
 import { IoMenuOutline } from "react-icons/io5";
 import { IconButton } from "../ui/IconButton";
+import PageTransition from "../ui/Motion/PageTransition";
+import { MotionDiv } from "../ui/Motion/MotionClient";
 
 export function Header() {
   const pathname = usePathname();
