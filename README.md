@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a8e4a0d4-4105-4a39-a538-5740f13d12ac/deploy-status)](https://app.netlify.com/projects/rebrovdev/deploys)
 ## Yuri's Homepage
 
 ## Stack
