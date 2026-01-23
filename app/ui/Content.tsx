@@ -49,6 +49,7 @@ export function ContentBox({ children }: IChildren) {
 export function ContentImage({ src, alt }: IContentImage) {
   return (
     <Image
+      loading="lazy"
       src={src}
       alt={alt}
       className="rounded-[10px] max-w-[720px] w-full"
